@@ -13,7 +13,7 @@ tags: [小程序, 前端]
 但是第三方的公众号，和我们不是同一个主体，也不方便让支付方便绑多个小程序。
 只能用到小程序的新功能 [web-view](https://mp.weixin.qq.com/debug/wxadoc/dev/component/web-view.html)。 听起来好像native开一个webview一样的,很高级的样子。
 然而到了用的时候，才知道不是那么回事，只能硬着头皮上了。
-
+<!-- more -->
 #### 上一波简单的代码
 
 ```

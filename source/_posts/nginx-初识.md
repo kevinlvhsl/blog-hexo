@@ -3,7 +3,7 @@ title: nginx 初识
 date: 2018-02-12 10:51:34
 tags: [nginx, 服务器]
 ---
-
+![nginx](/assets/nginx.png)
 ## 牛逼的web服务器工具:nginx
 
 > 一直与服务器打交道，也很多次遇到nginx，一直没有去认真学习过nginx
@@ -13,7 +13,7 @@ tags: [nginx, 服务器]
 ### 什么是 Nginx？
 Nginx 最初是作为一个 Web 服务器创建的，用于解决 C10k 的问题。作为一个 Web 服务器，它可以以惊人的速度为您的数据服务。但 Nginx 不仅仅是一个 Web 服务器，你还可以将其用作反向代理，与较慢的上游服务器（如：Unicorn 或 Puma）轻松集成。你可以适当地分配流量（负载均衡器）、流媒体、动态调整图像大小、缓存内容等等。
 基本的 nginx 体系结构由 master 进程和其 worker 进程组成。master 读取配置文件，并维护 worker 进程，而 worker 则会对请求进行实际处理。
-
+<!-- more -->
 #### 一、安装（我的mac电脑）、启动、停止
 + 安装
 > 其实安装到时很容易，安装的方式也有很多种。 我采用了mac上最简单的方式 homebrew。 先来到 /etc 目录下

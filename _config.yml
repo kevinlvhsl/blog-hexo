@@ -4,7 +4,7 @@
 
 # Site
 title: kevin梁
-subtitle: 一个小前端
+subtitle: 记性差的前端，烂笔头写博客
 description: 个人博客
 author: kevin liang
 language: zh-CN
@@ -66,6 +66,10 @@ pagination_dir: page
 theme: yilia
 
 # content
+# 文章太长，截断按钮文字
+excerpt_link: more
+# 文章卡片右下角常驻链接，不需要请设置为false
+show_all_link: '展开全文'
 jsonContent:
   meta: false
   pages: false
@@ -81,7 +85,7 @@ jsonContent:
     comments: true
     link: false
     permalink: false
-    excerpt: false
+    excerpt: true
     categories: false
     tags: true
 # Deployment

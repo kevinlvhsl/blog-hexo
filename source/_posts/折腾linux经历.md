@@ -9,7 +9,7 @@ tags: [技术, 服务器, linux]
 + 第一步，首先到[nodejs官网](https://nodejs.org/en/download/)下载[linux版本](https://nodejs.org/dist/v6.10.2/node-v6.10.2-linux-x64.tar.xz)的nodejs包
 
 + 第二步，下载好以后，通过xftp工具传到服务器上， 通过命令 `xz node-v6.10.2-linux-x64.tar.xz  和 tar -xvf node-v6.10.2-linux-x64.tar`
-
+<!-- more -->
 + 第三步，将nodejs链接到全局 `ln -s /解压缩后存放目录/node-v6.10.2-linux-x64/bin/node /usr/local/bin/node     ln -s /解压缩后存放目录/node-v6.10.2-linux-x64/bin/npm /usr/local/bin/npm`
 
 + 第四步，导出到环境变量 `export NODE_HOME=/usr/local/node/node-v6.10.2-linux-x64/bin`  `export PATH=$NODE_HOME:$PATH`

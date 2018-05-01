@@ -3,9 +3,10 @@ title: webpack.md
 date: 2018-02-25 23:21:50
 tags:
 ---
-
+![webpack](/assets/webpack.png)
 webpack是一个项目打包工具
 ### 安装   npm install webpack （这里展示webpack1.13.2版本） ### 使用 直接打包单个js文件    `webpack index.js  index.bundle.js`  表示打包index.js  打包后的文件叫做 index.boundle.js 也可以在命令后面直接带参数 如： --watch 等待   --module-bind 'css=style-loader!css-loader' 
+<!-- more -->
 打包后的文件 以数字（1、2、3...）的方式命名， 并且用webpack自己的__webpack_require__方式引入加载文件```/***/ },
 /* 3 */
 /***/ function(module, exports, __webpack_require__) {
