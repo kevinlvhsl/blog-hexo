@@ -27,7 +27,7 @@ tags: 技术
 + [小游戏开发中的问题汇总](http://forum.cocos.com/t/faq/54828)
 
 + [发布到微信小游戏平台](http://docs.cocos.com/creator/manual/zh/publish/publish-wechatgame.html)
-这里会讲到怎么将写好的小游戏发布到微信平台。
+这里会讲到怎么将写好的小游戏发布到微信平台。(#package)
 > 这里有一个非常重要的点， 就是游戏代码包超过4M上限时，该怎么办。 可以将代码中的res目录，放到远程服务器上，并将服务器的地址 设置到 libs下的wxDoloadloadre.js 中的  wxDownloader.REMOTE_SERVER_ROOT 变量上，（需要将服务器的域名配置在安全域名中） 这样就可以有效的减小代码包的大小。
 
 您的支持是我继续写的动力，后续再继续更新...
