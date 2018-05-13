@@ -60,10 +60,19 @@ time_format: HH:mm:ss
 per_page: 10
 pagination_dir: page
 
-# Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
 theme: yilia
+
+# 自动生成sitemap
+# Extensions 插件
+# Plugins:
+#   \- hexo-generator-sitemap
+#   sitemap:
+#     path: sitemap.xml
+#   baidusitemap:
+#     path: baidusitemap.xml
+
 
 # content
 # 文章太长，截断按钮文字
@@ -94,3 +103,5 @@ deploy:
   type: git
   repo: https://github.com/kevinlvhsl/kevinlvhsl.github.io.git
   branch: master
+
+plugins: hexo-generator-sitemap
