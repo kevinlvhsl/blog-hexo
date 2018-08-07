@@ -1,6 +1,19 @@
-// clone https://github.com/Tencent/weui.js/blob/master/src/uploader/image.js
+---
+title: 移动端ios拍照图片修正方向及压缩
+date: 2017-05-16 10:40:34
+tags: [技术, 图片上传, ios旋转]
+---
+
+> 在h5手机端经常会使用到拍照功能，但是ios上，拍照时，经常拍出来的图片是和实际拍摄的方向有一个角度的旋转(通常是90°)，这样很是影响体验。所以今天到网上找到了一个解决此问题的方法
+
+
+### 出处： cube-ui
+> clone
+`https://github.com/Tencent/weui.js/blob/master/src/uploader/image.js`
 // updated by cube-ui
 
+
+```js
 /*
 * Tencent is pleased to support the open source community by making WeUI.js available.
 *
@@ -90,9 +103,9 @@ function getOrientation(buffer) {
           var tags = view.getUint16(offset, little)
           offset += 2
           for (var i = 0; i < tags; i++)
-              { 
+              {
 if (view.getUint16(offset + (i * 12), little) == 0x0112)
-                  {return view.getUint16(offset + (i * 12) + 8, little);} 
+                  {return view.getUint16(offset + (i * 12) + 8, little);}
 }
       } else if ((marker & 0xFF00) != 0xFF00) break
       else offset += view.getUint16(offset, false)
@@ -222,3 +235,5 @@ function compress(file, options, callback) {
 }
 
 export default compress
+
+```

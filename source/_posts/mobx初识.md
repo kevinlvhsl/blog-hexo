@@ -17,7 +17,7 @@ Reactions 和计算值很像，但它不是产生一个新的值，而是会产�
 
 + Actions(动作)
 
-
+<!-- more -->
 
 ### mobx的几个核心要点
 + 1. 定义状态并使其可观察
@@ -70,35 +70,36 @@ Action --> State  --> View  单项数据流
 所有的计算值都应该是纯净的。它们不应该用来改变状态。
 
 ### 实例应用
-```
-import {observable, autorun} from 'mobx';
 
-var todoStore = observable({
-    /* 一些观察的状态 */
-    todos: [],
+```js
+    import {observable, autorun} from 'mobx';
 
-    /* 推导值 */
-    get completedCount() {
-        return this.todos.filter(todo => todo.completed).length;
-    }
-});
+    var todoStore = observable({
+        /* 一些观察的状态 */
+        todos: [],
 
-/* 观察状态改变的函数 */
-autorun(function() {
-    console.log("Completed %d of %d items",
-        todoStore.completedCount,
-        todoStore.todos.length
-    );
-});
+        /* 推导值 */
+        get completedCount() {
+            return this.todos.filter(todo => todo.completed).length;
+        }
+    });
 
-/* ..以及一些改变状态的动作 */
-todoStore.todos[0] = {
-    title: "Take a walk",
-    completed: false
-};
-// -> 同步打印 'Completed 0 of 1 items'
+    /* 观察状态改变的函数 */
+    autorun(function() {
+        console.log("Completed %d of %d items",
+            todoStore.completedCount,
+            todoStore.todos.length
+        );
+    });
 
-todoStore.todos[0].completed = true;
-// -> 同步打印 'Completed 1 of 1 items'
+    /* ..以及一些改变状态的动作 */
+    todoStore.todos[0] = {
+        title: "Take a walk",
+        completed: false
+    };
+    // -> 同步打印 'Completed 0 of 1 items'
+
+    todoStore.todos[0].completed = true;
+    // -> 同步打印 'Completed 1 of 1 items'
 
 ```
